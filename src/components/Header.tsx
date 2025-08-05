@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Header = () => {
   return (
-    <header className="w-full bg-card border-b border-border sticky top-0 z-50 shadow-sm">
+    <header className="w-full bg-gradient-to-r from-primary/5 to-background border-b border-primary/20 sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-2 sm:px-4 py-2 sm:py-3">
         <div className="flex items-center justify-between gap-1 sm:gap-2">
           {/* الأيقونات - يسار (في التخطيط العربي) */}
