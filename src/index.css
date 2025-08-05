@@ -2,39 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* تعريف نظام التصميم - جميع الألوان والتدرجات والخطوط يجب تعريفها هنا
+جميع الألوان يجب أن تكون بصيغة HSL
 */
 
 @layer base {
   :root {
+    /* ألوان أساسية لموقع موريتاني */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 210 11% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 210 11% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 210 11% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* الأخضر الأساسي - لون العلم الموريتاني */
+    --primary: 122 39% 49%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 122 39% 45%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* الأصفر الذهبي - لون العلم الموريتاني */
+    --secondary: 45 93% 58%;
+    --secondary-foreground: 210 11% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* ألوان محايدة */
+    --muted: 45 23% 95%;
+    --muted-foreground: 210 11% 46%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 23% 92%;
+    --accent-foreground: 210 11% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 45 23% 88%;
+    --input: 45 23% 88%;
+    --ring: 122 39% 49%;
 
     --radius: 0.5rem;
 
@@ -101,5 +106,48 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    direction: rtl; /* دعم اللغة العربية */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* تدرجات لونية جميلة */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-hover)));
+  }
+
+  .gradient-secondary {
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--accent)));
+  }
+
+  /* تأثيرات التفاعل */
+  .hover-scale {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-scale:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 8px 25px hsl(var(--primary) / 0.15);
+  }
+
+  /* تأثير النقر */
+  .category-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+  }
+
+  .category-card:hover {
+    border-color: hsl(var(--primary));
+    background: linear-gradient(145deg, hsl(var(--background)), hsl(var(--accent)));
+  }
+
+  .category-card:active {
+    transform: scale(0.98);
+  }
+
+  /* أنماط الفيديو */
+  .video-container {
+    box-shadow: 0 10px 30px hsl(var(--primary) / 0.1);
+    border-radius: 12px;
+    overflow: hidden;
   }
 }
