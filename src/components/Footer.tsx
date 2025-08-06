@@ -11,20 +11,33 @@ const Footer = () => {
           </p>
           
           <div className="flex flex-col gap-3 items-center">
-            <div className="flex items-center gap-2">
+            <a 
+              href="https://wa.me/22249055137" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
+            >
               <Phone className="h-4 w-4" />
               <span className="text-sm">+222 49055137</span>
-            </div>
+            </a>
             
-            <div className="flex items-center gap-2">
+            <a 
+              href="mailto:sidiyacheikh2024@gmail.com"
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
+            >
               <Mail className="h-4 w-4" />
               <span className="text-sm">sidiyacheikh2024@gmail.com</span>
-            </div>
+            </a>
             
-            <div className="flex items-center gap-2">
+            <a 
+              href="https://maps.app.goo.gl/vE3k4Ts1shPzQmNd7" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
+            >
               <MapPin className="h-4 w-4" />
               <span className="text-sm">نواكشوط، موريتانيا</span>
-            </div>
+            </a>
           </div>
           
           <div className="mt-6 pt-4 border-t border-primary-foreground/20">
