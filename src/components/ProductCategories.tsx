@@ -1,18 +1,18 @@
-import { Sofa, Tv, Refrigerator, Wind } from "lucide-react";
+import { DoorOpen, Palette, Refrigerator, Wind } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const categories = [
   {
     id: 1,
-    name: "الأثاث",
-    icon: Sofa,
+    name: "الأبواب والنوافذ",
+    icon: DoorOpen,
     bgColor: "bg-gradient-to-br from-primary/10 to-primary/5",
     iconColor: "text-primary"
   },
   {
     id: 2,
-    name: "التلفزيونات",
-    icon: Tv,
+    name: "الديكورات",
+    icon: Palette,
     bgColor: "bg-gradient-to-br from-secondary/20 to-secondary/10",
     iconColor: "text-secondary-foreground"
   },
